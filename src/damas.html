@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="css/bootstrap.css">
   
   <link rel="stylesheet" href="css/style.css">
-
+  <script src="js/jquery.min.js"></script>
 </head>
 <body>
   <header>
@@ -41,7 +41,7 @@
       <div class="item_details">
         <h2>Item Title</h2>
         <p class="item_description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus, laudantium.</p>
-        <button class="btn btn-success">Solicitar Precio</button>
+        <button class="btn btn-success get-order">Solicitar Precio</button>
       </div>
     </div>
     <div class="item bg-warning">
@@ -255,7 +255,34 @@
       <span>Hecho con mucho <i class="fa fa-heart"></i> ...y<i class="fa fa-coffee px-3"></i> por GregCodedIt </span><span >&copy; 2018</span>
     </div>
   </footer>
-  <script src="js/jquery.min.js"></script>
+
+  <script>
+  $( document ).ready(function() {
+    console.log('hi')
+  $('.get-order').click(function(e) {    
+    e.preventDefault()
+    var name = $(this).data('name')
+    console.log(name)
+    $('.item-number').attr('value', name)
+  })
+})
+
+//cycle through array to find button pressed (array location)
+//For example, this works:  let item = buttons[0].name;
+
+/*let item = buttons.forEach(function(e){
+      e.onclick = function() {
+          this.getAttribute("name");} });*/
+          
+let item = function(){
+    document.getElementsByClassName("active");
+          item.name;};
+
+
+
+</script>
+
+  
   <script src="js/popper.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
 </body>
