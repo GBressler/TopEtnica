@@ -1,0 +1,102 @@
+.marca{
+  font-size: 5rem;
+  
+}
+
+.marca, body {
+ font-family: 'Pacifico', cursive; 
+}
+/*--------HOME PAGE CAROUSEL------------*/
+ol div div img{
+  position: absolute;
+  margin: 0 auto;
+}
+
+.carousel-control-prev-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23f00' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
+}
+
+.carousel-control-next-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23f00' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
+}
+.carousel-item{
+  /*height:450px;*/
+  height:500px;
+}
+
+.carousel-image-1{
+  background:url('../img/carousel1.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 33%;
+  background-size: 700px;
+}
+
+.carousel-image-2{
+  background:url('../img/carousel2.jpg');
+  background-size:cover;
+  background-repeat: no-repeat;
+  /*background-position: top center 90%;*/
+  background-position: 50% 33%;
+ /*background-size: 450px;*/
+ background-size: 500px;
+}
+
+.carousel-image-3{
+  background:url('../img/carousel3.jpg');
+  background-size:contain;
+  /*background-position: center;*/
+  background-repeat: no-repeat;
+  background-position: 50% 33%;
+  background-size:500px;
+  /*width: 585px;
+  height:1040px;*/
+}
+
+/*--------PRODUCT GALLERIES----------*/
+
+.gallery {
+  margin: 25px 0 25px 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, max(300px));
+  grid-gap: 20px;
+
+  justify-content: space-around;
+  
+
+  .item {
+  /*background: rbga(255, 255, 255, 0.2);*/
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  padding:20px;
+
+  display: grid;
+  /*grid-template-columns: 150px 1fr;*/
+  grid-template-rows: 400px; /*changed from 400px
+  /*grid-template-rows: repeat(auto-fit);*/
+  /*grid-gap: 10px;*/
+  align-items: start;
+  /*align-content: center;*/
+  color: gray;
+  font-weight:100;
+    
+  }
+
+.item_details{
+
+      /*display: grid;
+      grid-template-rows: 50px;*/
+      text-align: center;  
+}
+
+#peacock{
+  object-fit:contain;
+}
+  .item_pic{
+  width:100%;
+  
+  }
+  /*.container{
+    object-fit: contain;
+  }*/
+}
+
