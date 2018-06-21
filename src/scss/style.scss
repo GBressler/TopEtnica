@@ -1,3 +1,5 @@
+$icon-size: 30px;
+
 .marca{
   font-size: 5rem;
   
@@ -15,7 +17,8 @@ ol div div img{
 .carousel-control-prev-icon {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23f00' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
 }
-
+  /**change the f00 in the fill='%23f00' to the appropriate hexidecimal color**/
+  /*https://stackoverflow.com/questions/46249541/change-arrow-colors-in-bootstraps-carousel*/
 .carousel-control-next-icon {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23f00' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
 }
@@ -52,6 +55,25 @@ ol div div img{
   /*width: 585px;
   height:1040px;*/
 }
+
+
+/*--------HOME PAGE ABOUT US------------*/
+
+#quienes-somos-section, #valores-section {
+    .fa{
+      padding:4px;
+      border-radius:5px;
+      font-size:$icon-size;
+    }
+  }
+
+  #mision-section {
+    .fa{
+    padding: 4px;
+    border-radius: 5px;
+    font-size: $icon-size;
+    } 
+  }
 
 /*--------PRODUCT GALLERIES----------*/
 

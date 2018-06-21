@@ -135,43 +135,92 @@
           <h5 class="modal-title" >Contactanos</h5>
           <button class="close" data-dismiss="modal"><span>&times;</span></button>
         </div>
+        <!-- Thankyou Message People See when they submit the form: -->
+        <div style="display:none;" class="thankyou_message modal-body bg-white">
+          <h2><em>Gracias</em> por contactarnos! Lo respondaremos pronto!</h2>
+        </div>
         <div class="modal-body bg-white" >
-          <form id="gform" method="POST" data-email="topetnica@gmail.com"
+          <form class="gform" method="POST" data-email="topetnica@gmail.com"
   action="https://script.google.com/macros/s/AKfycbxhxJP8s4Z5de6hVTc469sRZT_8dWAlAnJCpoiR-2XehUx0Vhi4/exec">
           <div class="form-group" >
             <div class="form-group"><label for="name">Nombre
             </label>
             <input type="text" class="form-control" name="nombre">
             </div>
+            
+            <div class="form-group"><label for="email">Email</label>
+              <input type="email" name="email" class="form-control">
+              <span class="email-invalid" style="display:none"> Must be a valid email address</span>
+            </div>
+            <div class="form-group">
+            <label for="inventory">Item
+            </label>
+            <input type="text" class="form-control bg-white" name="inventory" value="unbreakable" readonly>
+            </div>
             <div class="form-group">
               <lable for="message">Mensaje</lable>
               <textarea class="form-control" name="mensaje">Hola!  Me gustaria saber el precio de este item.</textarea>
             </div>
-            <div class="form-group"><label for="email">Email</label><input type="email" name="email" class="form-control"></div>
-            <div>
-            <!--<label for="item" >Item
+            <button class="button-success pure-button button-xlarge">      
+            <i class="fa fa-paper-plane"></i>&nbsp;Send</button> <span>Por favor haz click sola una vez.</span>
+          </form>
+      </div>
+    <!-- Closes Modal Body-->  
+    </div> 
+    <!--Closes Modal-Dialog -->
+    </div>  
+    <!--<script data-cfasync="false" type="text/javascript"
+  src="js/form-submission-handler.js"></script>-->
+  <!--Closes Modal -->
+  </div>
+
+
+
+   <!-- #2 Modals/ Solicitar Precio placed here to maintain grid layout -->
+    <div class="modal fade text-dark" id="modal">
+      <div class="modal-dialog">
+        <div class="modal-header bg-white" >
+          <h5 class="modal-title" >Contactanos</h5>
+          <button class="close" data-dismiss="modal"><span>&times;</span></button>
+        </div>
+        <!-- Thankyou Message People See when they submit the form: -->
+        <div style="display:none;" class="thankyou_message modal-body bg-white">
+          <h2><em>Gracias</em> por contactarnos! Lo respondaremos pronto!</h2>
+        </div>
+        <div class="modal-body bg-white" >
+          <form class="gform" method="POST" data-email="topetnica@gmail.com"
+  action="https://script.google.com/macros/s/AKfycbxhxJP8s4Z5de6hVTc469sRZT_8dWAlAnJCpoiR-2XehUx0Vhi4/exec">
+          <div class="form-group" >
+            <div class="form-group"><label for="name">Nombre
             </label>
-            <input type="text" class="form-control" id="item" name="item">-->
+            <input type="text" class="form-control" name="nombre">
             </div>
-            
-            
-            
+            <div class="form-group"><label for="email">Email</label>
+              <input type="email" name="email" class="form-control">
+              <span class="email-invalid" style="display:none"> Must be a valid email address</span>
+            </div>
+            <div>
+            <label for="inventory" >Item
+            </label>
+            <input type="text" class="form-control bg-white" name="inventory">
+            </div>
+            <div class="form-group">
+              <lable for="message">Mensaje</lable>
+              <textarea class="form-control" name="mensaje">Hola!  Me gustaria saber el precio de este item.</textarea>
+            </div>
             <button class="button-success pure-button button-xlarge">      
             <i class="fa fa-paper-plane"></i>&nbsp;Send</button>
           </form>
-        </div>
-         
-          <!-- Thankyou Message People See when they submit the form: -->
-        <div style="display:none;" class="modal-body bg-white" id="thankyou_message">
-          <h2><em>Gracias</em> por contactarnos! Lo respondaremos pronto!</h2>
-        </div>
       </div>
-    </div>   
+    <!-- Closes Modal Body-->  
+    </div> 
+    <!--Closes Modal-Dialog -->
+    </div>  
     <!--<script data-cfasync="false" type="text/javascript"
   src="js/form-submission-handler.js"></script>-->
-    
-    <!--THIS is the end of the gallery -->
+  <!--Closes Modal -->
   </div>
+<!--THIS is the end of the gallery -->
 </div>
 
   <footer class="footer bg-warning py-3">
@@ -192,6 +241,26 @@
   <script src="js/bootstrap.min.js"></script>
   <script data-cfasync="false" type="text/javascript"
   src="js/form-submission-handler.js"></script>
+  <!--<script>
+    let buttons = document.querySelectorAll(".close");
+    buttons = Array.from(buttons);
+    buttons.forEach(function(e){
+      e.onclick = function() {
+          var thanks = document.getElementsByClassName(".thankyou_message");
+          for (var j = 0; j < thanks.length; j++) {
+          if (thanks[j]) {
+              thanks[j].style.display = "none";
+            }
+          }
+          
+          var form = document.getElementsByClassName(".gform");
+          for (var i = 0; i < form.length; i++) {
+              form[i].style.display = "none"; // hides all submitted gforms
+            }
+
+      }
+  })
+  </script>-->
 </body>
 </html>
 

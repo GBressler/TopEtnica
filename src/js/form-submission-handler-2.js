@@ -227,14 +227,25 @@ function handleFormSubmit(event) {    // handles form submit without any jquery
             gform[j].className += " gform_submitted"; //adds class name for submitted gform
             var submittedGform = document.getElementsByClassName("gform_submitted");
 
-           for (var i = 0; i < submittedGform.length; i++) {
-              //submittedGform[i].style.display = "none"; // hides all submitted gforms
+            for (var i = 0; i < submittedGform.length; i++) {
+              submittedGform[i].style.display = "none"; // hides all submitted gforms
               submittedGform[i].reset(); //clears gform data if multiple forms are submitted without refreshing
             }
 
-            /*var thankYouMessage = document.getElementsByClassName("thankyou_message");
+            var thankYouMessage = document.getElementsByClassName("thankyou_message");
             if (thankYouMessage[j]) {
               thankYouMessage[j].style.display = "block";
+              setTimeout(function(){
+              thankYouMessage.style.display = "none";
+             8000});
+            }
+
+            
+
+            /*var submittedGform = document.getElementsByClassName("gform_submitted");
+            for (var i = 0; i < submittedGform.length; i++) {
+              submittedGform[i].style.display = "block"; // hides all submitted gforms
+              //submittedGform[i].reset(); //clears gform data if multiple forms are submitted without refreshing
             }*/
             return;
         };
