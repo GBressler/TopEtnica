@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Accesorios</title>
+  <link href="https://fonts.googleapis.com/css?family=Pacifico&amp;subset=cyrillic,latin-ext,vietnamese" rel="stylesheet">  
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  
+  <link rel="stylesheet" href="css/style.css">
+  
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="marca text-center">Top Étnica</div>
+    </div>
+  <br>
+  <br>
+  <br>
+  <br>
+    <nav class="nav nav-pills nav-justified d-flex flex-column flex-lg-row flex-md-row flex-sm-row">
+      <a class="nav-item nav-link bg-warning  flex-lg-fill flex-sm-fill" href="index.html">Inicio</a>
+      <a class="nav-item nav-link bg-warning  flex-lg-fill flex-sm-fill" href="damas.html">Damas</a>
+      <a class="nav-item nav-link bg-warning flex-lg-fill flex-sm-fill" href="ninas.html">Niñas</a>
+      <a class="nav-item nav-link bg-warning flex-lg-fill flex-sm-fill" href="accesorios.html">Accesorios</a>
+    </nav>
+  <br>
+  </header> 
+
+  <div class="gallery">
+    <div class="item bg-warning">
+      <img src="img/carousel1.jpg" height="357px" alt="" class="item_pic">
+      <div class="item_details">
+        <h2>Item Title</h2>
+        <p class="item_description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus, laudantium.</p>
+        <button class="btn btn-success get-order" data-toggle="modal" data-target="#modal" name="item1">Solicitar Precio</button>
+      </div>
+    </div>
+   <!--END OF GALLERY-->
+  </div>
+
+     <!-- Modals/ Solicitar Precio placed here to maintain grid layout -->
+    <div class="modal fade text-dark" id="modal">
+      <div class="modal-dialog">
+        <div class="modal-header bg-white" >
+          <h5 class="modal-title" >Contactanos</h5>
+          <button class="close" data-dismiss="modal"><span>&times;</span></button>
+        </div>
+        <!-- Thankyou Message People See when they submit the form: -->
+        <div style="display:none;" class="thankyou_message modal-body bg-white">
+          <h2><em>Gracias</em> por contactarnos! Lo respondaremos pronto!</h2>
+        </div>
+        <div class="modal-body bg-white" >
+          <form class="gform" method="POST" data-email="topetnica@gmail.com"
+  action="https://script.google.com/macros/s/AKfycbxhxJP8s4Z5de6hVTc469sRZT_8dWAlAnJCpoiR-2XehUx0Vhi4/exec">
+            <div class="form-group"><label for="name">Nombre
+            </label>
+            <input type="text" class="form-control" name="nombre">
+            </div>
+            
+            <div class="form-group"><label for="email">Email</label>
+              <input type="email" name="email" class="form-control">
+              <span class="email-invalid" style="display:none"> Must be a valid email address</span>
+            </div>
+            <div class="form-group">
+            <label for="inventory">Item
+            </label>
+            <input type="text" class="form-control bg-white" name="inventory" value="unbreakable" readonly>
+            </div>
+            <div class="form-group">
+              <lable for="message">Mensaje</lable>
+              <textarea class="form-control" name="mensaje">Hola!  Me gustaria saber el precio de este item.</textarea>
+            </div>
+            <button class="button-success pure-button button-xlarge">      
+            <i class="fa fa-paper-plane"></i>&nbsp;Send</button> <span>Por favor haz click sola una vez.</span>
+          </form>
+      <!--Closes Modal-Body-->
+      </div>
+    <!-- Closes Modal-Dialog-->  
+    </div> 
+    <!--Closes Modal-->
+    </div>  
+
+<footer class="footer bg-warning py-3">
+  <div class="d-flex flex-row">
+    <span class="ml-5">Hecho con mucho <i class="fa fa-heart"></i> ...y<i class="fa fa-coffee px-3"></i> por GregCodedIt </span><span>&copy; 2018</span>
+      <span class="d-flex ml-auto">
+        <a class="mx-2 icons" href="https://www.facebook.com/TopEtnica/" target="blank">
+          <i class="fa facebook fa-facebook-square fa-2x" style="color:#212529;" aria-hidden="true"></i>
+        </a>
+        <a class="mx-2 icons" href="https://plus.google.com/u/0/111032157345313900160" target="blank">
+          <i class="fa google fa-google-plus-square fa-2x" style="color:#212529;" aria-hidden="true"></i>
+        </a>
+        <a class="mx-2 icons" href="https://www.instagram.com/topetnica" target="blank">
+          <i class="fa instagram fa-instagram fa-2x" style="color:#212529;" aria-hidden="true"></i>
+        </a>
+        <a class="mr-5 ml-2 icons" href="https://twitter.com/TopEtnica" target="blank">
+          <i class="fa fa-twitter-square fa-2x" style="color:#212529;" aria-hidden="true"></i>
+        </a>
+      </span>
+  </div>
+</footer>
+  
+  <script src="js/jquery.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script data-cfasync="false" type="text/javascript"
+  src="js/form-submission-handler.js"></script>
+</body>
+</html>
