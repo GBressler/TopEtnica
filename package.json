@@ -2,7 +2,7 @@
   "name": "bootstrap4starter",
   "version": "1.0.0",
   "description": "Bootstrap 4 workflow",
-  "main": "index.html",
+  "main": "index.js",
   "scripts": {
     "start": "gulp"
   },
